@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div style="padding-right: 50px;">
+        date : <input type="text" id="mydate" oninput="showDate()">
+        <!-- money: <input type="text" id="mymoney" oninput="calculateMoney()">  -->
+    </div>
+
+   <div>
+    <table border="1">
+        <tr style="height: 10px;">
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr id="row4">
+            <td id="date_box">
+                <div class="box1">
+                    <span class="date_display"></span>
+                </div>
+            </td>
+            <td id="inout_box">
+                <div class="box2">
+                    <span id="sp1">入</span>
+                    <span>出</span>
+                </div>
+            </td>
+            <td id="station_box">
+                <div class="box2">
+                    <span id="sp1">都日暮里</span>
+                    <span>大師西</span>
+                </div>
+            </td>
+            <td id="fee_box">
+                <div class="box3">
+                    <span id="mymoney"><input type="text"></span>
+                    <span id="d4">-283</span>
+                </div>
+            </td>
+        </tr>
+        <tr id="row3">
+            <td id="date_box">
+                <div class="box1">
+                    <span class="date_display"></span>
+                </div>
+            </td>
+            <td id="inout_box">
+                <div class="box2">
+                    <span id="sp1">入</span>
+                    <span>出</span>
+                </div>
+            </td>
+            <td id="station_box">
+                <div class="box2">
+                    <span id="sp1">八丁堀</span>
+                    <span>日暮里</span>
+                </div>
+            </td>
+            <td id="fee_box">
+                <div class="box3">
+                    <span id="mymoney"><input type="text"></span>
+                    <span id="d3">-178</span>
+                </div>
+            </td>
+        </tr>
+        <tr id="row2">
+            <td id="date_box">
+                <div class="box1">
+                    <span class="date_display"></span>
+                </div>
+            </td>
+            <td id="inout_box">
+                <div class="box2">
+                    <span id="sp1">入</span>
+                    <span>出</span>
+                </div>
+            </td>
+            <td id="station_box">
+                <div class="box2">
+                    <span id="sp1">日暮里</span>
+                    <span>八丁堀</span>
+                </div>
+            </td>
+            <td id="fee_box">
+                <div class="box3">
+                    <span id="mymoney"><input type="text"></span>
+                    <span id="d2">-283</span>
+                </div>
+            </td>
+        </tr>
+        <tr id="row1">
+            <td id="date_box">
+                <div class="box1">
+                    <span class="date_display"></span>
+                </div>
+            </td>
+            <td id="inout_box">
+                <div class="box2">
+                    <span id="sp1">入</span>
+                    <span>出</span>
+                </div>
+            </td>
+            <td id="station_box">
+                <div class="box2">
+                    <span id="sp1">大師西</span>
+                    <span>都日暮里</span>
+                </div>
+            </td>
+            <td id="fee_box">
+                <div class="box3">
+                    <span id="mymoney"><input type="text"></span>
+                    <span id="d1">-178</span>
+                </div>
+            </td>
+        </tr>
+        <tr style="height: 10px;">
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+        </tr>
+        
+
+    </table>
+
+   </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        font-size: 9px;
+
+        font-family: "Noto Sans JP", sans-serif;
+    font-feature-settings: "palt";
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    table,
+    td {
+        border: 1px solid rgb(152, 152, 152);
+        border-width: 0.5px 1px;
+    }
+
+    td {
+        width: 100px;
+        text-align: left;
+    }
+
+    tr {
+        max-width: 10px;
+    }
+
+    input {
+        width: 60px;
+        text-align: right;
+        border: none;
+    }
+
+    .box1 {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-right: 5px;
+
+    }
+
+    .box2 {
+        display: flex;
+        flex-direction: column;
+        padding-left: 5px;
+    }
+
+    .box3 {
+        display: flex;
+        flex-direction: column;
+        padding-left: 5px;
+        align-items: flex-end;
+    }
+
+    #sp1 , #money_display , #result1 , #result2 , #result3{
+        padding-bottom: 5px;
+    }
+    #date_box , 
+    #inout_box,
+    #station_box,
+    #fee_box{
+        width: 60px;
+    }
+</style>
+<script>
+    function showDate() {
+    // Get the value from the input field
+    var dateValue = document.getElementById("mydate").value;
+
+    // Get all spans with class "date_display"
+    var spans = document.getElementsByClassName("date_display");
+
+    // Loop through all spans and update their text content
+    for (var i = 0; i < spans.length; i++) {
+        spans[i].textContent = dateValue;
+    }
+}
+</script>
